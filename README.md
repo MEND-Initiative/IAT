@@ -1,1 +1,2 @@
-IAT module for Implicit Bias project
+MEND Initiative
+IAT module for Implicit Bias roject
