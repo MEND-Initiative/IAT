@@ -1,22 +1,22 @@
-define(['pipAPI', 'https://mend-initiative.github.io/IAT/Hispanic.js'], function(APIConstructor, iatExtension){
+define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat9.js'], function(APIConstructor, iatExtension){
     var API = new APIConstructor();
 var posWords = API.shuffle([
-            'Love', 'Cheer', 'Friend', 'Pleasure', 
-            'Adore', 'Cheerful', 'Friendship', 'Joyful', 
-            'Smiling','Cherish', 'Excellent', 'Glad', 
-            'Joyous', 'Spectacular', 'Appealing', 'Delight', 
-            'Excitement', 'Laughing', 'Attractive','Delightful', 
-            'Fabulous', 'Glorious', 'Pleasing', 'Beautiful', 
-            'Fantastic', 'Happy', 'Lovely', 'Terrific', 
+            'Love', 'Cheer', 'Friend', 'Pleasure',
+            'Adore', 'Cheerful', 'Friendship', 'Joyful',
+            'Smiling','Cherish', 'Excellent', 'Glad',
+            'Joyous', 'Spectacular', 'Appealing', 'Delight',
+            'Excitement', 'Laughing', 'Attractive','Delightful',
+            'Fabulous', 'Glorious', 'Pleasing', 'Beautiful',
+            'Fantastic', 'Happy', 'Lovely', 'Terrific',
             'Celebrate', 'Enjoy', 'Magnificent', 'Triumph']);
   var negWords = API.shuffle([
-            'Abuse', 'Grief', 'Poison', 'Sadness', 
-            'Pain', 'Despise', 'Failure', 'Nasty', 
-            'Angry', 'Detest', 'Horrible', 'Negative', 
-            'Ugly', 'Dirty', 'Gross', 'Evil', 
-            'Rotten','Annoy', 'Disaster', 'Horrific',  
+            'Abuse', 'Grief', 'Poison', 'Sadness',
+            'Pain', 'Despise', 'Failure', 'Nasty',
+            'Angry', 'Detest', 'Horrible', 'Negative',
+            'Ugly', 'Dirty', 'Gross', 'Evil',
+            'Rotten','Annoy', 'Disaster', 'Horrific',
             'Scorn', 'Awful', 'Disgust', 'Hate', 
-            'Humiliate', 'Selfish', 'Tragic', 'Bothersome', 
+            'Humiliate', 'Selfish', 'Tragic', 'Bothersome',
             'Hatred', 'Hurtful', 'Sickening', 'Yucky']);
 	return iatExtension({
 
@@ -26,7 +26,7 @@ var posWords = API.shuffle([
 				media : {word : 'Hispanic'}, //Name of the category presented in the task.
 				css : {color:'#31940F','font-size':'1.8em'}, //Style of the category title.
 				height : 4 //Used to position the "Or" in the combined block.
-			}, 
+			},
 			stimulusMedia : [ //Stimuli content as PIP's media objects
     		        {word: 'Jose'},
                 {word: 'Carlos'},
@@ -37,18 +37,18 @@ var posWords = API.shuffle([
             	  {word: 'Fernando'},
                 {word: 'Juan'},
                 {word: 'Pedro'},
-				        {word: 'Antonio'}  
-			], 
+				        {word: 'Antonio'}
+			],
 			//Stimulus css (style)
 			stimulusCss : {color:'#31940F','font-size':'1.8em'}
-		},	
+		},
 		category2 :	{
 			name : 'Other People', //Will appear in the data.
 			title : {
 				media : {word : 'Other People'}, //Name of the category presented in the task.
 				css : {color:'#31940F','font-size':'1.8em'}, //Style of the category title.
 				height : 4 //Used to position the "Or" in the combined block.
-			}, 
+			},
 			stimulusMedia : [ //Stimuli content as PIP's media objects
     		        {word: 'Ernest'},
                 {word: 'Matthais'},
@@ -60,7 +60,7 @@ var posWords = API.shuffle([
                 {word: 'Kazuki'},
                 {word: 'Chaiyo'},
 				        {word: 'Isaac'}
-			], 
+			],
 			//Stimulus css
 			stimulusCss : {color:'#31940F','font-size':'1.8em'}
 		},
@@ -109,6 +109,6 @@ var posWords = API.shuffle([
 
 		base_url : {//Where are your images at?
 			image : 'https://baranan.github.io/minno-tasks/images/'
-		} 
+		}
 	});
 });
