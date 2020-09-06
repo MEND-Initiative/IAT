@@ -1,4 +1,4 @@
-define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat9.js'], function(APIConstructor, iatExtension){
+define(['pipAPI', 'https://mend-initiative.github.io/IAT/QualtricsMain.js'], function(APIConstructor, iatExtension){
     var API = new APIConstructor();
 var posWords = API.shuffle([
             'Love', 'Cheer', 'Friend', 'Pleasure',
@@ -15,7 +15,7 @@ var posWords = API.shuffle([
             'Angry', 'Detest', 'Horrible', 'Negative',
             'Ugly', 'Dirty', 'Gross', 'Evil',
             'Rotten','Annoy', 'Disaster', 'Horrific',
-            'Scorn', 'Awful', 'Disgust', 'Hate', 
+            'Scorn', 'Awful', 'Disgust', 'Hate',
             'Humiliate', 'Selfish', 'Tragic', 'Bothersome',
             'Hatred', 'Hurtful', 'Sickening', 'Yucky']);
 	return iatExtension({
