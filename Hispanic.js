@@ -1,4 +1,4 @@
-define(['pipAPI', 'https://mend-initiative.github.io/IAT/QualtricsMain.js'], function(APIConstructor, iatExtension){
+define(['pipAPI', 'https://mend-initiative.github.io/IAT/Qualtricstest.js'], function(APIConstructor, iatExtension){
     var API = new APIConstructor();
 var posWords = API.shuffle([
             'Love', 'Cheer', 'Friend', 'Pleasure',
