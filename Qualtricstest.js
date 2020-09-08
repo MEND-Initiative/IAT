@@ -1,6 +1,23 @@
 //YBYB:Created from iat8.js, for Qualtrics
 define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) {
-
+	var posWords = API.shuffle([
+	            'Love', 'Cheer', 'Friend', 'Pleasure',
+	            'Adore', 'Cheerful', 'Friendship', 'Joyful',
+	            'Smiling','Cherish', 'Excellent', 'Glad',
+	            'Joyous', 'Spectacular', 'Appealing', 'Delight',
+	            'Excitement', 'Laughing', 'Attractive','Delightful',
+	            'Fabulous', 'Glorious', 'Pleasing', 'Beautiful',
+	            'Fantastic', 'Happy', 'Lovely', 'Terrific',
+	            'Celebrate', 'Enjoy', 'Magnificent', 'Triumph']);
+	  var negWords = API.shuffle([
+	            'Abuse', 'Grief', 'Poison', 'Sadness',
+	            'Pain', 'Despise', 'Failure', 'Nasty',
+	            'Angry', 'Detest', 'Horrible', 'Negative',
+	            'Ugly', 'Dirty', 'Gross', 'Evil',
+	            'Rotten','Annoy', 'Disaster', 'Horrific',
+	            'Scorn', 'Awful', 'Disgust', 'Hate',
+	            'Humiliate', 'Selfish', 'Tragic', 'Bothersome',
+	            'Hatred', 'Hurtful', 'Sickening', 'Yucky']);
 	/**
 	Created by: Yoav Bar-Anan (baranan@gmail.com). Modified by Gal
 	 * @param  {Object} options Options that replace the defaults...
