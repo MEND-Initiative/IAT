@@ -33,37 +33,45 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			},
 			//When scoring, we will consider the compatible condition the pairing condition that requires response with one key to [category1,attribute1] and the other key to [category2,attribute2]
 			category1 : {
-				name : 'Black people', //Will appear in the data and in the default feedback message.
+				name : 'Hispanic people', //Will appear in the data and in the default feedback message.
 				title : {
 					media : {word : 'Black people'}, //Name of the category presented in the task.
 					css : {color:'#336600','font-size':'1.8em'}, //Style of the category title.
 					height : 4 //Used to position the "Or" in the combined block.
 				},
 				stimulusMedia : [ //Stimuli content as PIP's media objects
-					{word: 'Tyron'},
-					{word: 'Malik'},
-					{word: 'Terrell'},
-					{word: 'Jazmin'},
-					{word: 'Tiara'},
-					{word: 'Shanice'}
+					{word: 'Jose'},
+					{word: 'Carlos'},
+					{word: 'Julian'},
+					{word: 'Santiago'},
+					{word: 'Diego'},
+					{word: 'Javier'},
+					{word: 'Fernando'},
+					{word: 'Juan'},
+					{word: 'Pedro'},
+					{word: 'Antonio'}
 				],
 				//Stimulus css (style)
 				stimulusCss : {color:'#336600','font-size':'2.3em'}
 			},
 			category2 :	{
-				name : 'White people', //Will appear in the data and in the default feedback message.
+				name : 'Other people', //Will appear in the data and in the default feedback message.
 				title : {
 					media : {word : 'White people'}, //Name of the category presented in the task.
 					css : {color:'#336600','font-size':'1.8em'}, //Style of the category title.
 					height : 4 //Used to position the "Or" in the combined block.
 				},
 				stimulusMedia : [ //Stimuli content as PIP's media objects
-					{word: 'Jake'},
-					{word: 'Connor'},
-					{word: 'Bradley'},
-					{word: 'Allison'},
-					{word: 'Emma'},
-					{word: 'Emily'}
+					{word: 'Ernest'},
+					{word: 'Matthais'},
+					{word: 'Maarten'},
+					{word: 'Phillip'},
+					{word: 'Guillame'},
+					{word: 'Benoit'},
+					{word: 'Takuya'},
+					{word: 'Kazuki'},
+					{word: 'Chaiyo'},
+					{word: 'Isaac'}
 				],
 				//Stimulus css
 				stimulusCss : {color:'#336600','font-size':'2.3em'}
@@ -77,14 +85,14 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					height : 4 //Used to position the "Or" in the combined block.
 				},
 				stimulusMedia : [ //Stimuli content as PIP's media objects
-					{word: 'awful'},
-					{word: 'failure'},
-					{word: 'agony'},
-					{word: 'hurt'},
-					{word: 'horrible'},
-					{word: 'terrible'},
-					{word: 'nasty'},
-					{word: 'evil'}
+					{word: negWords[0]},
+					{word: negWords[1]},
+					{word: negWords[2]},
+					{word: negWords[3]},
+					{word: negWords[4]},
+					{word: negWords[5]},
+					{word: negWords[6]},
+					{word: negWords[7]}
 				],
 				//Stimulus css
 				stimulusCss : {color:'#0000FF','font-size':'2.3em'}
@@ -98,14 +106,14 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					height : 4 //Used to position the "Or" in the combined block.
 				},
 				stimulusMedia : [ //Stimuli content as PIP's media objects
-					{word: 'laughter'},
-					{word: 'happy'},
-					{word: 'glorious'},
-					{word: 'joy'},
-					{word: 'wonderful'},
-					{word: 'peace'},
-					{word: 'pleasure'},
-					{word: 'love'}
+					{word: posWords[0]},
+					{word: posWords[1]},
+					{word: posWords[2]},
+					{word: posWords[3]},
+					{word: posWords[4]},
+					{word: posWords[5]},
+					{word: posWords[6]},
+					{word: posWords[7]}
 				],
 				//Stimulus css
 				stimulusCss : {color:'#0000FF','font-size':'2.3em'}
