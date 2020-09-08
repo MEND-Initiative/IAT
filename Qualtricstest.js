@@ -1,23 +1,4 @@
 //YBYB:Created from iat8.js, for Qualtrics
-var posWords = API.shuffle([
-            'Love', 'Cheer', 'Friend', 'Pleasure',
-            'Adore', 'Cheerful', 'Friendship', 'Joyful',
-            'Smiling','Cherish', 'Excellent', 'Glad',
-            'Joyous', 'Spectacular', 'Appealing', 'Delight',
-            'Excitement', 'Laughing', 'Attractive','Delightful',
-            'Fabulous', 'Glorious', 'Pleasing', 'Beautiful',
-            'Fantastic', 'Happy', 'Lovely', 'Terrific',
-            'Celebrate', 'Enjoy', 'Magnificent', 'Triumph']);
-var negWords = API.shuffle([
-            'Abuse', 'Grief', 'Poison', 'Sadness',
-            'Pain', 'Despise', 'Failure', 'Nasty',
-            'Angry', 'Detest', 'Horrible', 'Negative',
-            'Ugly', 'Dirty', 'Gross', 'Evil',
-            'Rotten','Annoy', 'Disaster', 'Horrific',
-            'Scorn', 'Awful', 'Disgust', 'Hate',
-            'Humiliate', 'Selfish', 'Tragic', 'Bothersome',
-            'Hatred', 'Hurtful', 'Sickening', 'Yucky']);
-
 define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) {
 
 	/**
@@ -123,14 +104,37 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					height : 4 //Used to position the "Or" in the combined block.
 				},
 				stimulusMedia : [ //Stimuli content as PIP's media objects
-					{word: negWords[0]},
-					{word: negWords[1]},
-					{word: negWords[2]},
-					{word: negWords[3]},
-					{word: negWords[4]},
-					{word: negWords[5]},
-					{word: negWords[6]},
-					{word: negWords[7]}
+					{word: 'Abuse'},
+					{word: 'Grief'},
+					{word: 'Poison'},
+					{word: 'Sadness'},
+					{word: 'Pain'},
+					{word: 'Despise'},
+					{word: 'Failure'},
+					{word: 'Nasty'},
+					{word: 'Angry'},
+					{word: 'Detest'},
+					{word: 'Horrible'},
+					{word: 'Negative'},
+					{word: 'Ugly'},
+					{word: 'Dirty'},
+					{word: 'Gross'},
+					{word: 'Evil'},
+					{word: 'Rotten'},
+					{word: 'Annoy'},
+					{word: 'Horrific'},
+					{word: 'Scorn'},
+					{word: 'Awful'},
+					{word: 'Disgust'},
+					{word: 'Hate'},
+					{word: 'Humiliate'},
+					{word: 'Selfish'},
+					{word: 'Tragic'},
+					{word: 'Bothersome'},
+					{word: 'Hatred'},
+					{word: 'Hurtful'},
+					{word: 'Sickening'},
+					{word: 'Yucky'}
 				],
 				//Stimulus css
 				stimulusCss : {color:'#0000FF','font-size':'2.3em'}
@@ -144,14 +148,38 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					height : 4 //Used to position the "Or" in the combined block.
 				},
 				stimulusMedia : [ //Stimuli content as PIP's media objects
-					{word: posWords[0]},
-					{word: posWords[1]},
-					{word: posWords[2]},
-					{word: posWords[3]},
-					{word: posWords[4]},
-					{word: posWords[5]},
-					{word: posWords[6]},
-					{word: posWords[7]}
+					{word: 'Love'},
+					{word: 'Cheer'},
+					{word: 'Friend'},
+					{word: 'Pleasure'},
+					{word: 'Adore'},
+					{word: 'Cheerful'},
+					{word: 'Friendship'},
+					{word: 'Joyful'},
+					{word: 'Smiling'},
+					{word: 'Cherish'},
+					{word: 'Excellent'},
+					{word: 'Glad'},
+					{word: 'Joyous'},
+					{word: 'Spectacular'},
+					{word: 'Appealing'},
+					{word: 'Delight'},
+					{word: 'Excitement'},
+					{word: 'Laughing'},
+					{word: 'Attractive'},
+					{word: 'Delightful'},
+					{word: 'Fabulous'},
+					{word: 'Glorious'},
+					{word: 'Pleasing'},
+					{word: 'Beautiful'},
+					{word: 'Fantastic'},
+					{word: 'Happy'},
+					{word: 'Lovely'},
+					{word: 'Terrific'},
+					{word: 'Celebrate'},
+					{word: 'Enjoy'},
+					{word: 'Magnificent'},
+					{word: 'Triumph'}
 				],
 				//Stimulus css
 				stimulusCss : {color:'#0000FF','font-size':'2.3em'}
