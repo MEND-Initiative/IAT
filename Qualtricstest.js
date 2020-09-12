@@ -31,66 +31,39 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 				canvasBackground: '#ffffff',
 				borderColor: 'lightblue'
 			},
-
-			var posWords = API.shuffle([
-			            'Love', 'Cheer', 'Friend', 'Pleasure',
-			            'Adore', 'Cheerful', 'Friendship', 'Joyful',
-			            'Smiling','Cherish', 'Excellent', 'Glad',
-			            'Joyous', 'Spectacular', 'Appealing', 'Delight',
-			            'Excitement', 'Laughing', 'Attractive','Delightful',
-			            'Fabulous', 'Glorious', 'Pleasing', 'Beautiful',
-			            'Fantastic', 'Happy', 'Lovely', 'Terrific',
-			            'Celebrate', 'Enjoy', 'Magnificent', 'Triumph']);
-			var negWords = API.shuffle([
-			            'Abuse', 'Grief', 'Poison', 'Sadness',
-			            'Pain', 'Despise', 'Failure', 'Nasty',
-			            'Angry', 'Detest', 'Horrible', 'Negative',
-			            'Ugly', 'Dirty', 'Gross', 'Evil',
-			            'Rotten','Annoy', 'Disaster', 'Horrific',
-			            'Scorn', 'Awful', 'Disgust', 'Hate',
-			            'Humiliate', 'Selfish', 'Tragic', 'Bothersome',
-			            'Hatred', 'Hurtful', 'Sickening', 'Yucky']);
 			//When scoring, we will consider the compatible condition the pairing condition that requires response with one key to [category1,attribute1] and the other key to [category2,attribute2]
 			category1 : {
-				name : 'Hispanic people', //Will appear in the data and in the default feedback message.
+				name : 'Black people', //Will appear in the data and in the default feedback message.
 				title : {
-					media : {word : 'Hispanic people'}, //Name of the category presented in the task.
+					media : {word : 'Black people'}, //Name of the category presented in the task.
 					css : {color:'#336600','font-size':'1.8em'}, //Style of the category title.
 					height : 4 //Used to position the "Or" in the combined block.
 				},
 				stimulusMedia : [ //Stimuli content as PIP's media objects
-					{word: 'Jose'},
-					{word: 'Carlos'},
-					{word: 'Julian'},
-					{word: 'Santiago'},
-					{word: 'Diego'},
-					{word: 'Javier'},
-					{word: 'Fernando'},
-					{word: 'Juan'},
-					{word: 'Pedro'},
-					{word: 'Antonio'}
+					{word: 'Tyron'},
+					{word: 'Malik'},
+					{word: 'Terrell'},
+					{word: 'Jazmin'},
+					{word: 'Tiara'},
+					{word: 'Shanice'}
 				],
 				//Stimulus css (style)
 				stimulusCss : {color:'#336600','font-size':'2.3em'}
 			},
 			category2 :	{
-				name : 'Other people', //Will appear in the data and in the default feedback message.
+				name : 'White people', //Will appear in the data and in the default feedback message.
 				title : {
-					media : {word : 'Other people'}, //Name of the category presented in the task.
+					media : {word : 'White people'}, //Name of the category presented in the task.
 					css : {color:'#336600','font-size':'1.8em'}, //Style of the category title.
 					height : 4 //Used to position the "Or" in the combined block.
 				},
 				stimulusMedia : [ //Stimuli content as PIP's media objects
-					{word: 'Ernest'},
-					{word: 'Matthais'},
-					{word: 'Maarten'},
-					{word: 'Phillip'},
-					{word: 'Guillame'},
-					{word: 'Benoit'},
-					{word: 'Takuya'},
-					{word: 'Kazuki'},
-					{word: 'Chaiyo'},
-					{word: 'Isaac'}
+					{word: 'Jake'},
+					{word: 'Connor'},
+					{word: 'Bradley'},
+					{word: 'Allison'},
+					{word: 'Emma'},
+					{word: 'Emily'}
 				],
 				//Stimulus css
 				stimulusCss : {color:'#336600','font-size':'2.3em'}
@@ -104,37 +77,14 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					height : 4 //Used to position the "Or" in the combined block.
 				},
 				stimulusMedia : [ //Stimuli content as PIP's media objects
-					{word: 'Abuse'},
-					{word: 'Grief'},
-					{word: 'Poison'},
-					{word: 'Sadness'},
-					{word: 'Pain'},
-					{word: 'Despise'},
-					{word: 'Failure'},
-					{word: 'Nasty'},
-					{word: 'Angry'},
-					{word: 'Detest'},
-					{word: 'Horrible'},
-					{word: 'Negative'},
-					{word: 'Ugly'},
-					{word: 'Dirty'},
-					{word: 'Gross'},
-					{word: 'Evil'},
-					{word: 'Rotten'},
-					{word: 'Annoy'},
-					{word: 'Horrific'},
-					{word: 'Scorn'},
-					{word: 'Awful'},
-					{word: 'Disgust'},
-					{word: 'Hate'},
-					{word: 'Humiliate'},
-					{word: 'Selfish'},
-					{word: 'Tragic'},
-					{word: 'Bothersome'},
-					{word: 'Hatred'},
-					{word: 'Hurtful'},
-					{word: 'Sickening'},
-					{word: 'Yucky'}
+					{word: 'awful'},
+					{word: 'failure'},
+					{word: 'agony'},
+					{word: 'hurt'},
+					{word: 'horrible'},
+					{word: 'terrible'},
+					{word: 'nasty'},
+					{word: 'evil'}
 				],
 				//Stimulus css
 				stimulusCss : {color:'#0000FF','font-size':'2.3em'}
@@ -148,38 +98,14 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					height : 4 //Used to position the "Or" in the combined block.
 				},
 				stimulusMedia : [ //Stimuli content as PIP's media objects
-					{word: 'Love'},
-					{word: 'Cheer'},
-					{word: 'Friend'},
-					{word: 'Pleasure'},
-					{word: 'Adore'},
-					{word: 'Cheerful'},
-					{word: 'Friendship'},
-					{word: 'Joyful'},
-					{word: 'Smiling'},
-					{word: 'Cherish'},
-					{word: 'Excellent'},
-					{word: 'Glad'},
-					{word: 'Joyous'},
-					{word: 'Spectacular'},
-					{word: 'Appealing'},
-					{word: 'Delight'},
-					{word: 'Excitement'},
-					{word: 'Laughing'},
-					{word: 'Attractive'},
-					{word: 'Delightful'},
-					{word: 'Fabulous'},
-					{word: 'Glorious'},
-					{word: 'Pleasing'},
-					{word: 'Beautiful'},
-					{word: 'Fantastic'},
-					{word: 'Happy'},
-					{word: 'Lovely'},
-					{word: 'Terrific'},
-					{word: 'Celebrate'},
-					{word: 'Enjoy'},
-					{word: 'Magnificent'},
-					{word: 'Triumph'}
+					{word: 'laughter'},
+					{word: 'happy'},
+					{word: 'glorious'},
+					{word: 'joy'},
+					{word: 'wonderful'},
+					{word: 'peace'},
+					{word: 'pleasure'},
+					{word: 'love'}
 				],
 				//Stimulus css
 				stimulusCss : {color:'#0000FF','font-size':'2.3em'}
@@ -437,9 +363,10 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
             // Transform logs into a string
             // we save as CSV because qualtrics limits to 20K characters and this is more efficient.
             serialize: function (name, logs) {
-                var headers = ['block', 'trial', 'cond', 'comp', 'type', 'cat',  'stim', 'resp', 'err', 'rt', 'd', 'fb', 'bOrd'];
+                var headers = ['group', 'latency', 'block', 'stimulus', 'correct'];
                 //console.log(logs);
-                var myLogs = [];
+/*
+								var myLogs = [];
                 var iLog;
                 for (iLog = 0; iLog < logs.length; iLog++)
                 {
@@ -459,25 +386,20 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                         // myLogs.push(logs[iLog]);
                     }
                 }
+
+				*/
                 var content = myLogs.map(function (log) {
                     return [
-                        log.data.block, //'block'
-                        log.trial_id, //'trial'
-                        log.data.condition, //'cond'
-                        log.data.cong, //'comp'
-                        log.name, //'type'
-                        log.stimuli[0], //'cat'
-                        log.media[0], //'stim'
-                        log.responseHandle, //'resp'
-                        log.data.score, //'err'
-                        log.latency, //'rt'
-                        '', //'d'
-                        '', //'fb'
-                        '' //'bOrd'
+                        [log.data.alias,
+													log.latency,
+													log.data.block,
+													log.data.stimIndex,
+													log.data.score
                         ]; });
                 //console.log('mapped');
                 //Add a line with the feedback, score and block-order condition
-                content.push([
+/*
+								content.push([
                             9, //'block'
                             999, //'trial'
                             'end', //'cond'
@@ -493,10 +415,10 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                             block3Cond //'bOrd'
                         ]);
                 //console.log('added');
-
+*/
                 content.unshift(headers);
                 return toCsv(content);
-
+/*
                 function hasProperties(obj, props) {
                     var iProp;
                     for (iProp = 0; iProp < props.length; iProp++)
@@ -509,6 +431,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                     }
                     return true;
                 }
+*/
+
                 function toCsv(matrice) { return matrice.map(buildRow).join('\n'); }
                 function buildRow(arr) { return arr.map(normalize).join(','); }
                 // wrap in double quotes and escape inner double quotes
