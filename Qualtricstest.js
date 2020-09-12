@@ -365,7 +365,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
             serialize: function (name, logs) {
                 var headers = ['group', 'latency', 'block', 'stimulus', 'correct'];
                 //console.log(logs);
-/*
+
 								var myLogs = [];
                 var iLog;
                 for (iLog = 0; iLog < logs.length; iLog++)
@@ -387,7 +387,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                     }
                 }
 
-				*/
+
                 var content = myLogs.map(function (log) {
                     return [
                         [log.data.alias,
@@ -418,7 +418,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 */
                 content.unshift(headers);
                 return toCsv(content);
-/*
+
                 function hasProperties(obj, props) {
                     var iProp;
                     for (iProp = 0; iProp < props.length; iProp++)
@@ -431,7 +431,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                     }
                     return true;
                 }
-*/
+
 
                 function toCsv(matrice) { return matrice.map(buildRow).join('\n'); }
                 function buildRow(arr) { return arr.map(normalize).join(','); }
