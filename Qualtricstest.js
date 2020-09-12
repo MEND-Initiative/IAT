@@ -398,7 +398,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                         ]; });
                 //console.log('mapped');
                 //Add a line with the feedback, score and block-order condition
-/*
+
 								content.push([
                             9, //'block'
                             999, //'trial'
@@ -415,7 +415,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                             block3Cond //'bOrd'
                         ]);
                 //console.log('added');
-*/
+
                 content.unshift(headers);
                 return toCsv(content);
 
