@@ -363,10 +363,9 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
             // Transform logs into a string
             // we save as CSV because qualtrics limits to 20K characters and this is more efficient.
             serialize: function (name, logs) {
-                var headers = ['group', 'latency', 'block', 'stimulus', 'correct'];
+                var headers = ['block', 'trial', 'cond', 'comp', 'type', 'cat',  'stim', 'resp', 'err', 'rt', 'd', 'fb', 'bOrd'];
                 //console.log(logs);
-
-								var myLogs = [];
+                var myLogs = [];
                 var iLog;
                 for (iLog = 0; iLog < logs.length; iLog++)
                 {
@@ -386,20 +385,25 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                         // myLogs.push(logs[iLog]);
                     }
                 }
-
-
                 var content = myLogs.map(function (log) {
                     return [
-                        [log.data.alias,
-													log.latency,
-													log.data.block,
-													log.data.stimIndex,
-													log.data.score
+                        log.data.block, //'block'
+                        log.trial_id, //'trial'
+                        log.data.condition, //'cond'
+                        log.data.cong, //'comp'
+                        log.name, //'type'
+                        log.stimuli[0], //'cat'
+                        log.media[0], //'stim'
+                        log.responseHandle, //'resp'
+                        log.data.score, //'err'
+                        log.latency, //'rt'
+                        '', //'d'
+                        '', //'fb'
+                        '' //'bOrd'
                         ]; });
                 //console.log('mapped');
                 //Add a line with the feedback, score and block-order condition
-
-								content.push([
+                content.push([
                             9, //'block'
                             999, //'trial'
                             'end', //'cond'
@@ -431,8 +435,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
                     }
                     return true;
                 }
-
-
                 function toCsv(matrice) { return matrice.map(buildRow).join('\n'); }
                 function buildRow(arr) { return arr.map(normalize).join(','); }
                 // wrap in double quotes and escape inner double quotes
