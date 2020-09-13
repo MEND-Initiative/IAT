@@ -1,4 +1,4 @@
-define(['https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat9.js'], function(APIConstructor, iatExtension){
+define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat9.js'], function(APIConstructor, iatExtension){
     var API = new APIConstructor();
 
 	return iatExtension({
@@ -10,7 +10,7 @@ define(['https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat
 				height : 4 //Used to position the "Or" in the combined block.
 			},
 			stimulusMedia : [ //Stimuli content as PIP's media objects
-    		  {image : 'black1.jpg'},
+    		    {image : 'black1.jpg'},
     			{image : 'black2.jpg'},
     			{image : 'black3.jpg'},
     			{image : 'black4.jpg'},
@@ -28,7 +28,7 @@ define(['https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat
 				height : 4 //Used to position the "Or" in the combined block.
 			},
 			stimulusMedia : [ //Stimuli content as PIP's media objects
-    		  {image : 'yf1.jpg'},
+    		    {image : 'yf1.jpg'},
     			{image : 'yf4.jpg'},
     			{image : 'yf5.jpg'},
     			{image : 'ym2.jpg'},
