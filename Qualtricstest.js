@@ -40,12 +40,12 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					height : 4 //Used to position the "Or" in the combined block.
 				},
 				stimulusMedia : [ //Stimuli content as PIP's media objects
-					{word: 'Tyron'},
-					{word: 'Malik'},
-					{word: 'Terrell'},
-					{word: 'Jazmin'},
-					{word: 'Tiara'},
-					{word: 'Shanice'}
+					{image : 'black1.jpg'},
+    			{image : 'black2.jpg'},
+    			{image : 'black3.jpg'},
+    			{image : 'black4.jpg'},
+    			{image : 'black5.jpg'},
+    			{image : 'black6.jpg'}
 				],
 				//Stimulus css (style)
 				stimulusCss : {color:'#336600','font-size':'2.3em'}
@@ -58,12 +58,12 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					height : 4 //Used to position the "Or" in the combined block.
 				},
 				stimulusMedia : [ //Stimuli content as PIP's media objects
-					{word: 'Jake'},
-					{word: 'Connor'},
-					{word: 'Bradley'},
-					{word: 'Allison'},
-					{word: 'Emma'},
-					{word: 'Emily'}
+					{image : 'yf1.jpg'},
+    			{image : 'yf4.jpg'},
+    			{image : 'yf5.jpg'},
+    			{image : 'ym2.jpg'},
+    			{image : 'ym3.jpg'},
+    			{image : 'ym5.jpg'}
 				],
 				//Stimulus css
 				stimulusCss : {color:'#336600','font-size':'2.3em'}
@@ -112,7 +112,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			},
 
 			base_url : {//Where are your images at?
-				image : '/implicit/user/yba/pipexample/biat/images/'
+				image : 'https://baranan.github.io/minno-tasks/images/'
 			},
 
 			//nBlocks : 7, This is not-supported anymore. If you want a 5-block IAT, change blockSecondCombined_nTrials to 0.
